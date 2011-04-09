@@ -3,7 +3,7 @@ export EC2_PRIVATE_KEY="/Users/landa/.ec2/pk.pem"
 export EC2_CERT="/Users/landa/.ec2/cert.pem"
 export BC_REPLAYS="/Users/landa/Dropbox/Battlecode/replays"
 export _JAVA_OPTIONS="-Xms32m -Xmx512m"
-export PYTHONPATH="/Library/Python/2.6/site-packages"
+export PYTHONPATH="/Library/Python/2.6/site-packages:/usr/local/lib/python2.6/site-packages"
 export CLICOLOR=1
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 export ANDROID_SDK="~/Development/Android/android-sdk-mac_x86"
@@ -13,7 +13,7 @@ export MYSQL="/usr/local/mysql/bin"
 export GIT="/usr/local/git/bin"
 export EC2_HOME="/Users/landa/Development/PBD/Amazon/ec2-api-tools-1.3-36506"
 
-PATH="/usr/bin/:${PATH}"
+PATH="/usr/bin/:/usr/local/bin/:${PATH}"
 PATH="${PATH}:${MYSQL}"
 PATH="${PATH}:${GIT}"
 PATH="${PATH}:${EC2_HOME}/bin"
