@@ -18,6 +18,7 @@ PATH="${PATH}:${MYSQL}"
 PATH="${PATH}:${GIT}"
 PATH="${PATH}:${EC2_HOME}/bin"
 PATH="${PATH}:${ANDROID_SDK}/tools"
+PATH="${PATH}:${ANDROID_SDK}/platform_tools"
 export PATH
 export JAVA_HOME="/usr"
 
@@ -33,4 +34,10 @@ gd() {
 	mate /var/tmp/gitdiff;
 }
 
+srch() {
+	find . | grep $*
+}
+
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
+
+source .solutions
