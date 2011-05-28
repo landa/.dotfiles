@@ -3,10 +3,11 @@ export EC2_PRIVATE_KEY="/Users/landa/.ec2/pk.pem"
 export EC2_CERT="/Users/landa/.ec2/cert.pem"
 export BC_REPLAYS="/Users/landa/Dropbox/Battlecode/replays"
 export _JAVA_OPTIONS="-Xms32m -Xmx512m"
-export PYTHONPATH="/Library/Python/2.6/site-packages:/usr/local/lib/python2.6/site-packages"
+export PYTHONPATH="/opt/local/lib/python2.6/site-packages:/Library/Python/2.6/site-packages:/usr/local/lib/python2.6/site-packages"
 export CLICOLOR=1
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
-export ANDROID_SDK="~/Development/Android/android-sdk-mac_x86"
+export ANDROID_SDK="/Users/landa/Development/Android/android-sdk-mac_x86"
+export VIDEATION="/Users/landa/Development/videation"
 
 # PATH
 export MYSQL="/usr/local/mysql/bin"
@@ -19,6 +20,7 @@ PATH="${PATH}:${GIT}"
 PATH="${PATH}:${EC2_HOME}/bin"
 PATH="${PATH}:${ANDROID_SDK}/tools"
 PATH="${PATH}:${ANDROID_SDK}/platform_tools"
+PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 export PATH
 export JAVA_HOME="/usr"
 
@@ -38,6 +40,5 @@ srch() {
 	find . | grep $*
 }
 
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
+source /Users/landa/.solutions
 
-source .solutions
