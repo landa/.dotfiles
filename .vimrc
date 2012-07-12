@@ -9,18 +9,9 @@ syn match tab display "\t"
 hi link tab Error
 syntax on
 set hlsearch
+set scrolloff=3
+set bs=2
+set cursorline
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
- 
-" kill any trailing whitespace on save
-" autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
-"   \ autocmd BufWritePre <buffer>
-"     \ :call <SID>StripTrailingWhitespaces()
