@@ -1,6 +1,6 @@
 # Turn off the start up message
 startup_message off 
-#  
+
 # Turn off flash-on-tab-complete
 vbell off 
 
