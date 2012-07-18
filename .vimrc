@@ -12,6 +12,7 @@ set hlsearch
 set scrolloff=3
 set bs=2
 set cursorline
+set ignorecase smartcase
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
