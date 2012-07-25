@@ -24,7 +24,7 @@ PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 export PATH
 export JAVA_HOME="/usr"
 
-export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`[\u@\h:\w]\\$ "
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`[\[\033[0;34m\]\u\[\033[0;37m\]@\[\033[0;34m\]\h\[\033[1;37m\]:\[\033[1;34m\]\w\[\033[0m\]]\[\033[1;32m\]\$(__git_ps1 \"%s\")\[\033[0m\]$ "
 
 # Aliases
 alias ducks='du -cks * |sort -rn |head -n11'
