@@ -8,3 +8,5 @@ export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]^.^\[\e[0m\]; else echo \[\e[3
 function gl {
   grep --color=always -r "$*" . | grep --color=always -v \.svn | less -R
 }
+
+alias ls="ls --color"
