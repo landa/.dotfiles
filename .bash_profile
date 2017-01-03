@@ -16,4 +16,25 @@ function gl {
 
 alias ls="ls --color"
 
-export PS1="\[\033[0;37m\]\u\[\033[0;32m\]\`if [ \$? = 0 ]; then echo \[\e[32m\]@\[\e[0m\]; else echo \[\e[31m\]@\[\e[0m\]; fi\`\[\033[0;37m\]\h\[\033[0m\]:\[\033[1;37m\]\w\[\033[0m\]\[\033[1;32m\]\[\033[0m\]$ "
+PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
+
+__prompt_command() {
+    local EXIT="$?"             # This needs to be first
+    PS1="\u"
+
+    local RCol='\[\e[0m\]'
+
+    local Red='\[\e[0;31m\]'
+    local Gre='\[\e[0;32m\]'
+    local BYel='\[\e[1;33m\]'
+    local BBlu='\[\e[1;34m\]'
+    local Pur='\[\e[0;35m\]'
+
+    if [ $EXIT != 0 ]; then
+        PS1+="${Red}@${RCol}"      # Add red if exit code non 0
+    else
+        PS1+="${Gre}@${RCol}"
+    fi
+
+    PS1+="\h:$(PWD)\\$\[$(tput sgr0)\] "
+}
